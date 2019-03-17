@@ -4,7 +4,10 @@
   "description": "Example demo using VueJS and the gd-sprest-bs library.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "all": "npm run build && npm run prod",
+    "build": "webpack --mode=development",
+    "prod": "webpack --mode=production",
+    "serve": "webpack-dev-server"
   },
   "repository": {
     "type": "git",

@@ -1,16 +1,18 @@
 var path = require("path");
+var { VueLoaderPlugin } = require("vue-loader");
 
 // Return the configuration
 module.exports = {
     // Include the gd-sprest global library
     entry: [
-        "./node_modules/gd-sprest/dist/gd-sprest.min.js",
+        "./node_modules/gd-sprest-bs/dist/gd-sprest-bs.min.js",
         "./src/index.ts"
     ],
 
     // Exclude the gd-sprest reference from the bundle
     externals: {
-        "gd-sprest": "$REST"
+        "gd-sprest": "$REST",
+        "gd-sprest-bs": "$REST"
     },
 
     // Output location
@@ -21,8 +23,21 @@ module.exports = {
 
     // Resolve the file names
     resolve: {
-        extensions: [".js", ".css", ".scss", ".ts"]
+        extensions: [".js", ".css", ".scss", ".ts", ".vue"]
     },
+
+    // Dev Server
+    devServer: {
+        inline: true,
+        hot: true,
+        open: true,
+        publicPath: "/dist/"
+    },
+
+    // Plugins
+    plugins: [
+        new VueLoaderPlugin()
+    ],
 
     // Loaders
     module: {
@@ -55,6 +70,13 @@ module.exports = {
                     // TypeScript -> JavaScript (ES5)
                     { loader: "ts-loader" }
                 ]
+            },
+            // VueJS
+            {
+                // Target VueJS files
+                test: /\.vue$/,
+                // Vue Template -> JavaScript
+                loader: "vue-loader"
             }
         ]
     }
