@@ -1,0 +1,61 @@
+var path = require("path");
+
+// Return the configuration
+module.exports = {
+    // Include the gd-sprest global library
+    entry: [
+        "./node_modules/gd-sprest/dist/gd-sprest.min.js",
+        "./src/index.ts"
+    ],
+
+    // Exclude the gd-sprest reference from the bundle
+    externals: {
+        "gd-sprest": "$REST"
+    },
+
+    // Output location
+    output: {
+        path: path.resolve(__dirname, "dist"),
+        filename: "app.js"
+    },
+
+    // Resolve the file names
+    resolve: {
+        extensions: [".js", ".css", ".scss", ".ts"]
+    },
+
+    // Loaders
+    module: {
+        rules: [
+            // SASS to JavaScript
+            {
+                // Target the sass and css files
+                test: /\.s?css$/,
+                // Define the compiler to use
+                use: [
+                    // Create style nodes from the CommonJS code
+                    { loader: "style-loader" },
+                    // Translate css to CommonJS
+                    { loader: "css-loader" },
+                    // Compile sass to css
+                    { loader: "sass-loader" }
+                ]
+            },
+            // TypeScript to JavaScript
+            {
+                // Target TypeScript files
+                test: /\.tsx?$/,
+                exclude: /node_modules/,
+                use: [
+                    // JavaScript (ES5) -> JavaScript (Current)
+                    {
+                        loader: "babel-loader",
+                        options: { presets: ["@babel/preset-env"] }
+                    },
+                    // TypeScript -> JavaScript (ES5)
+                    { loader: "ts-loader" }
+                ]
+            }
+        ]
+    }
+}
