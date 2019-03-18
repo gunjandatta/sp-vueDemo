@@ -30,7 +30,7 @@ if (ContextInfo.existsFl) {
                     Helper.SP.ModalDialog.showModalDialog({
                         showMaximized: true,
                         title: "Contacts",
-                        url: "/sites/dev/siteassets/vue-demo/dialog.aspx"
+                        url: "/sites/demo/siteassets/vuejs/dialog.aspx"
                     });
                 }
             })

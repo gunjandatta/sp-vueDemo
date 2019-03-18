@@ -14,7 +14,7 @@ export const Configuration = {
                 Description: "Registers the demo VueJS app library with SP.SOD.",
                 Location: "ScriptLink",
                 Sequence: 10000,
-                ScriptBlock: "SP.SOD.registerSod('vue-demo-app', '/sites/dev/vue-demo-app.js');"
+                ScriptBlock: "SP.SOD.registerSod('vue-demo-app', '/sites/demo/siteassets/vuejs/vue-demo-app.js');"
             }]
         }
     }),
