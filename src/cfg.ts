@@ -58,7 +58,7 @@ export const Configuration = {
                 Description: "Creates a ribbon button for the VueJS demo app.",
                 Location: "ScriptLink",
                 Sequence: 10500,
-                ScriptBlock: "if(SP.SOD.executeOrDelayUntilScriptLoaded(function() { VueJSDemo.ribbon(); }, 'vue-demo-app');"
+                ScriptBlock: "if(SP.SOD.executeOrDelayUntilScriptLoaded(function() { VueJSDemo.ribbon(); }, 'vue-demo-app') == false) { LoadSodByKey('vue-demo-app'); };"
             }]
         }
     }),
