@@ -18,7 +18,7 @@ module.exports = {
     // Output location
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "app.js"
+        filename: "vue-demo-app.js"
     },
 
     // Resolve the file names
