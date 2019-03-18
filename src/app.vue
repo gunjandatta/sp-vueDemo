@@ -1,11 +1,9 @@
 <template>
     <div class="bs">
-        <header>Header</header>
-        <div ref="main">Main</div>
-        <footer>Footer</footer>
+        <Header />
+        <Main />
+        <Footer />
     </div>
 </template>
 
-<script>
-export default {}
-</script>
+<script src="./app.ts"></script>
