@@ -67,7 +67,7 @@ export const Configuration = {
     WebPart: Helper.SPConfig({
         WebPartCfg: [
             {
-                FileName: "",
+                FileName: "vue-demo-app.webpart",
                 Group: "Apps (Custom)",
                 XML: `<?xml version="1.0" encoding="utf-8"?>
                 <webParts>
@@ -83,7 +83,7 @@ export const Configuration = {
                                 <property name="ChromeType" type="chrometype">None</property>
                                 <property name="Content" type="string">
                                     &lt;div id="wp-vue-demo"&gt;&lt;/div&gt;
-                                    &lt;script type="text/javascript"&gt;if(SP.SOD.executeOrDelayUntilScriptLoaded(function() { new VueJSDemo.init(); }, 'demoListWP') == false) { LoadSodByKey('vue-demo-app'); };&lt;/script&gt;
+                                    &lt;script type="text/javascript"&gt;if(SP.SOD.executeOrDelayUntilScriptLoaded(function() { new VueJSDemo.webpart(); }, 'vue-demo-app') == false) { LoadSodByKey('vue-demo-app'); };&lt;/script&gt;
                                 </property>
                             </properties>
                         </data>
