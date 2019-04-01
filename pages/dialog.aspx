@@ -19,6 +19,7 @@
     <script src="/_layouts/15/sp.core.js"></script>
     <script src="/_layouts/15/sp.runtime.js"></script>
     <script src="/_layouts/15/sp.js"></script>
+    <script src="/_layouts/15/sp.init.js"></script>
 </head>
 
 <body>
