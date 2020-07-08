@@ -16,7 +16,6 @@ export default {
     data: () => {
         return {
             alertType: Components.AlertTypes.Info,
-            noData: () => { return this.items && this.items.length == 0; },
             table1Columns: [
                 {
                     name: "FName",
