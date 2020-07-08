@@ -1,4 +1,4 @@
-import { Helper, SPTypes } from "gd-sprest";
+import { Helper, SPTypes } from "gd-sprest-bs";
 import Cfg from "./strings";
 
 /**

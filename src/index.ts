@@ -1,4 +1,4 @@
-import { ContextInfo, Helper } from "gd-sprest";
+import { ContextInfo, Helper } from "gd-sprest-bs";
 import Vue from "vue";
 import App from "./app.vue";
 import { Configuration } from "./cfg";
@@ -14,7 +14,7 @@ if (ContextInfo.existsFl) {
         dialog: () => {
             // Render the app
             new Vue({
-                el: "#vue-js-demo",
+                el: "#app",
                 render: h => h(App)
             });
         },

@@ -21,22 +21,23 @@
   },
   "homepage": "https://github.com/gunjandatta/sp-vueDemo#readme",
   "dependencies": {
-    "gd-sprest-bs": "^1.8.4",
-    "vue": "^2.6.9",
-    "vue-template-compiler": "^2.6.9"
+    "gd-sprest-bs": "^5.1.4",
+    "gd-sprest-bs-vue": "^0.0.8",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "babel-loader": "^8.0.5",
-    "css-loader": "^2.1.1",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "ts-loader": "^5.3.3",
-    "vue-loader": "^15.7.0",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1"
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^7.0.5",
+    "vue-loader": "^15.9.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }

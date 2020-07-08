@@ -4,7 +4,7 @@
             <div class="col-md-2 d-none d-md-block bg-light sidebar" ref="sidebar">
             </div>
             <div class="col-md-10 ms-sm-auto main" ref="main">
-                <List v-bind:items="items" v-bind:view="view" />
+                <List v-bind:items="items" v-bind:viewType="view" />
             </div>
         </div>
     </div>

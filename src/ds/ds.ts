@@ -1,4 +1,4 @@
-import { ContextInfo, List } from "gd-sprest";
+import { ContextInfo, List } from "gd-sprest-bs";
 import Configuration from "../strings";
 import { TestData } from "./data";
 import { IMainItem } from "./ds.d";

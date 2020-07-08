@@ -1,73 +1,23 @@
 import { Components } from "gd-sprest-bs";
-import { IMainItem } from "../ds";
+import { Alert, Spinner, Table } from "gd-sprest-bs-vue";
 
-/**
- * View Types
- */
-export enum ViewTypes {
-    View1 = 1,
-    View2
-}
+// View Types
+export const ViewTypes = {
+    View1: 1,
+    View2: 2
+};
 
-/**
- * List
- */
-export default (() => {
-    let el: HTMLElement = null;
-    let items: Array<IMainItem> = null;
-
-    // Method to render the table
-    let render = (view) => {
-        // See if data exists
-        if (items == null) {
-            // Data is still being loaded
-            Components.Spinner({
-                el,
-                text: "Loading the data..."
-            });
-            return;
-        }
-
-        // See if no items exist
-        if (items.length == 0) {
-            // Render an empty message
-            Components.Alert({
-                el,
-                content: "No data exists...",
-                type: Components.AlertTypes.Info
-            });
-            return;
-        }
-
-        // See if this is the second view
-        if (view == ViewTypes.View2) {
-            // Render the second view
-            Components.Table({
-                el,
-                rows: items,
-                columns: [
-                    {
-                        name: "Title",
-                        title: "Full Name",
-                        onRenderCell: (el, column, item: IMainItem) => {
-                            // Render the full name
-                            el.innerHTML = [item.FName || "", item.Title || ""].join(" ");
-                        }
-                    },
-                    {
-                        name: "Address",
-                        title: "Address"
-                    }
-                ]
-            });
-            return;
-        }
-
-        // By default render the first view
-        Components.Table({
-            el,
-            rows: items,
-            columns: [
+export default {
+    components: { Alert, Spinner, Table },
+    props: {
+        items: { type: Array },
+        viewType: { type: Number }
+    },
+    data: () => {
+        return {
+            alertType: Components.AlertTypes.Info,
+            noData: () => { return this.items && this.items.length == 0; },
+            table1Columns: [
                 {
                     name: "FName",
                     title: "First Name"
@@ -80,44 +30,21 @@ export default (() => {
                     name: "Address",
                     title: "Address"
                 }
-            ]
-        });
+            ] as Array<Components.ITableColumn>,
+            table2Columns: [
+                {
+                    name: "Title",
+                    title: "Full Name",
+                    onRenderCell: (el, column, item) => {
+                        // Render the full name
+                        el.innerHTML = [item.FName || "", item.Title || ""].join(" ");
+                    }
+                },
+                {
+                    name: "Address",
+                    title: "Address"
+                }
+            ] as Array<Components.ITableColumn>,
+        };
     }
-
-    // Return the configuration
-    return {
-        props: {
-            items: { type: Array },
-            view: { type: Number }
-        },
-        watch: {
-            items: (newValue, oldValue) => {
-                // Update the items
-                items = newValue;
-
-                // Clear the element
-                el.innerHTML = "";
-
-                // Render the component
-                render(this.view);
-            },
-            view: (newValue, oldValue) => {
-                // Clear the element
-                el.innerHTML = "";
-
-                // Render the component
-                render(newValue);
-            }
-        },
-        mounted() {
-            // Save the reference to the element
-            el = this.$refs["list"];
-
-            // Set the items
-            items = this.items;
-
-            // Render the component
-            render(this.view);
-        }
-    };
-})();
+}
