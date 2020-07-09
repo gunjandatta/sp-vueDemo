@@ -6,4 +6,13 @@
     </div>
 </template>
 
-<script src="./app.ts"></script>
+<script>
+import Footer from "./components/footer.vue";
+import Header from "./components/header.vue";
+import Main from "./components/main.vue";
+export default {
+    components: {
+        Footer, Header, Main
+    }
+}
+</script>

@@ -1,5 +1,5 @@
 <template>
-  <Navbar brand="App Header" v-bind:type="navbarType" />
+  <Navbar brand="App Footer" v-bind:type="navbarType" />
 </template>
 
 <script>
