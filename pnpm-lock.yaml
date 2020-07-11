@@ -1,6 +1,6 @@
 dependencies:
   gd-sprest-bs: 5.1.4
-  gd-sprest-bs-vue: 0.1.3
+  gd-sprest-bs-vue: 0.1.7
   vue: 2.6.11
   vue-template-compiler: 2.6.11
 devDependencies:
@@ -1535,7 +1535,7 @@ packages:
       integrity: sha512-Z942RysHXmJrhqk88FmKBVq/v5tqmSkDz7p54G/MGyjMnCFFnC79XWNbg+Vta8W6Wb2qtSZTSxIGkJrRpCFEiA==
   /browserslist/4.13.0:
     dependencies:
-      caniuse-lite: 1.0.30001097
+      caniuse-lite: 1.0.30001099
       electron-to-chromium: 1.3.496
       escalade: 3.0.1
       node-releases: 1.1.59
@@ -1638,10 +1638,10 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
-  /caniuse-lite/1.0.30001097:
+  /caniuse-lite/1.0.30001099:
     dev: true
     resolution:
-      integrity: sha512-TeuSleKt/vWXaPkLVFqGDnbweYfq4IaZ6rUugFf3rWY6dlII8StUZ8Ddin0PkADfgYZ4wRqCdO2ORl4Rn5eZIA==
+      integrity: sha512-sdS9A+sQTk7wKoeuZBN/YMAHVztUfVnjDi4/UV3sDE8xoh7YR12hKW+pIdB3oqKGwr9XaFL2ovfzt9w8eUI5CA==
   /caseless/0.12.0:
     dev: true
     resolution:
@@ -2735,12 +2735,12 @@ packages:
       node: '>= 4.0.0'
     resolution:
       integrity: sha512-BRdNm8hbWzFzWHERTrejLqwHDfS4GibPoq5wjTPIoJHoBtKGPg3xAFfxmM+9ztbXelxcf2hwQcaz1PtmFeue8g==
-  /gd-bs-vue/0.1.4:
+  /gd-bs-vue/0.1.9:
     dependencies:
       gd-bs: 3.0.8
     dev: false
     resolution:
-      integrity: sha512-szbU50Ai0+x0flN6shj8Fcdm6+ybW15rDegothKgklw6RBimntpCcXVtv+Qbw9mHmddPbVsMlqVxap+CGpYBsw==
+      integrity: sha512-5euVv1ab06ohwpC8VA6tInxpHMzvhdtnISEm+tjl9J0XPzjyOnCjwtRRIi6IEwO8OfJORodpMA1NuIw7JLO/AQ==
   /gd-bs/3.0.8:
     dependencies:
       bootstrap: 5.0.0-alpha1_popper.js@1.16.1
@@ -2748,13 +2748,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-sxTLc3HLaFNR4vSuNzH71cfOmP6gfJ2GnfighiRA551wgCQkzy7oAGF5ladvmWQQlBVs09M46cQyXxOcTgqIyw==
-  /gd-sprest-bs-vue/0.1.3:
+  /gd-sprest-bs-vue/0.1.7:
     dependencies:
-      gd-bs-vue: 0.1.4
+      gd-bs-vue: 0.1.9
       gd-sprest-bs: 5.1.4
     dev: false
     resolution:
-      integrity: sha512-4p5kg2/NrLB9DN45NMPxYhZoBFNWYBwITJ0zEfc2mBrJ0rRdIWmpqUAwmxn1Q85sXf39YjeJjtmGku0j6OZQcg==
+      integrity: sha512-ywexSuFsw+lOg4QaHlb2MJhyQGalMNWZVrydbmzM/e29EOfmcWOX43gG57XRPGyu/Tf6N5LiCv8ykWhCiBKrag==
   /gd-sprest-bs/5.1.4:
     dependencies:
       flatpickr: 4.6.3
@@ -6202,7 +6202,7 @@ specifiers:
   babel-loader: ^8.1.0
   css-loader: ^3.6.0
   gd-sprest-bs: ^5.1.4
-  gd-sprest-bs-vue: ^0.1.3
+  gd-sprest-bs-vue: ^0.1.7
   node-sass: ^4.14.1
   sass-loader: ^9.0.2
   style-loader: ^1.2.1
