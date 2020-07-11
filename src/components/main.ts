@@ -16,29 +16,30 @@ export default (() => {
         data: () => {
             return {
                 items: null,
-                view: ViewTypes.View1,
-                navItems: null
+                view: ViewTypes.View1
             };
         },
+        computed: {
+            navItems(): Array<Components.INavLink> {
+                return [
+                    {
+                        title: "View 1",
+                        onClick: () => {
+                            // Update the selected view
+                            this.view = ViewTypes.View1;
+                        }
+                    },
+                    {
+                        title: "View 2",
+                        onClick: () => {
+                            // Update the selected view
+                            this.view = ViewTypes.View2;
+                        }
+                    }
+                ];
+            }
+        },
         mounted() {
-            // Set the items here, otherwise "this" won't work
-            this.navItems = [
-                {
-                    title: "View 1",
-                    onClick: () => {
-                        // Update the selected view
-                        this.view = ViewTypes.View1;
-                    }
-                },
-                {
-                    title: "View 2",
-                    onClick: () => {
-                        // Update the selected view
-                        this.view = ViewTypes.View2;
-                    }
-                }
-            ] as Array<Components.INavLink>;
-
             // Load the data
             DataSource.Main.get().then(items => {
                 // Update the items

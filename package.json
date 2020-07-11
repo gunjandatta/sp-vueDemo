@@ -22,7 +22,7 @@
   "homepage": "https://github.com/gunjandatta/sp-vueDemo#readme",
   "dependencies": {
     "gd-sprest-bs": "^5.1.4",
-    "gd-sprest-bs-vue": "^0.0.8",
+    "gd-sprest-bs-vue": "^0.1.3",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   },
@@ -34,7 +34,7 @@
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.2",
     "style-loader": "^1.2.1",
-    "ts-loader": "^7.0.5",
+    "ts-loader": "^8.0.0",
     "vue-loader": "^15.9.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
