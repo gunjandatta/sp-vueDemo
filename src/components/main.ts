@@ -13,7 +13,7 @@ export default (() => {
         components: {
             List, Nav
         },
-        data: () => {
+        data() {
             return {
                 items: null,
                 view: ViewTypes.View1

@@ -13,7 +13,7 @@ export default {
         items: { type: Array },
         viewType: { type: Number }
     },
-    data: () => {
+    data() {
         return {
             alertType: Components.AlertTypes.Info,
             table1Columns: [

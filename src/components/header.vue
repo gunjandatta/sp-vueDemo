@@ -7,7 +7,7 @@ import { Components } from "gd-sprest-bs";
 import { Navbar } from "gd-sprest-bs-vue";
 export default {
   components: { Navbar },
-  data: () => {
+  data() {
     return {
       navbarType: Components.NavbarTypes.Dark
     };
